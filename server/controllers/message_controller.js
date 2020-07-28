@@ -22,8 +22,8 @@ messages[messageIndex].text = text || messages[messageIndex].text;
 res.status(200).send(messages);
     },
     delete: (req, res) => {
-        constID = req.params.id;
-        const messageIndex = messages.findIndex(message => message.id == +deleteID);
+        const deleteID = req.params.id;
+        const messageIndex = messages.findIndex(message => message.id === deleteID);
         messages.splice(messageIndex, 1);
         res.status(200).send(messages);
         
